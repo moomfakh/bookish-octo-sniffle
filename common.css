@@ -23,8 +23,7 @@ display: inline ;
 font-size: 30px ;
 }
 .material-icons {
-padding: 0 ;
-margin: 0 ;
+border-right: 5px solid ;
 position: relative ;
 top: 5px ;
 }
