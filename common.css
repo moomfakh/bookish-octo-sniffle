@@ -21,10 +21,10 @@ background: #2e8cff
 color: #2e8cff ;
 display: inline ;
 font-size: 30px ;
+font-family : Helvetica , sans-serif ;
 }
 .material-icons {
-border-right: 2px solid black;
 position: relative ;
 top: 5px ;
-right: 5px
+right: 5px ;
 }
