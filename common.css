@@ -21,6 +21,8 @@ background: #2e8cff
 color: #2e8cff ;
 display: inline ;
 font-size: 30px ;
+}
+.info {
 font-family : Helvetica , sans-serif ;
 }
 .material-icons {
