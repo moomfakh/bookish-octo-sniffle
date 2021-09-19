@@ -21,13 +21,14 @@ background: #2e8cff
 .material-icons , .info{
 color: #2e8cff ;
 display: inline ;
-font-size: 25px ;
 }
 .info {
 font-family : Helvetica , sans-serif ;
+font-size: 25px ;
 }
 .material-icons {
 position: relative ;
 top: 5px ;
 right: 5px ;
+font-size: 22px ;
 }
