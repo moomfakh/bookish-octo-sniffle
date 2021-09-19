@@ -29,6 +29,10 @@ font-size: 36px ;
 </style>
 </head>
 <body>
-<div class="card"><div class="container"><p class="title" >Introduction</p></div></div>
+<div class="card" tabindex=0 onclick="nav('introduction.html')" ><div class="container"><p class="title" >Introduction</p></div></div>
+<script>
+function nav(uri) {
+window.location.href = uri; 
+}
 </body>
 </html>
