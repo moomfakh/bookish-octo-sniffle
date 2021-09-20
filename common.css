@@ -33,3 +33,10 @@ right: 5px ;
 font-size: 28px ;
 margin-right : 5px ;
 }
+.next {
+background : #2e8cff ;
+color: white ;
+border-radius: 10px ;
+position: absolute ;
+bottom: 15vh ;
+}
