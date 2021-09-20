@@ -37,9 +37,9 @@ margin-right : 5px ;
 background : #2e8cff ;
 color: white ;
 padding: 5px 15px ;
-border-radius: 10px ;
+border-radius: 15px ;
 position: absolute ;
 bottom: 15vh ;
 left: 45vw ;
-
+border: none ;
 }
