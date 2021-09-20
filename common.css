@@ -36,10 +36,10 @@ margin-right : 5px ;
 .next {
 background : #2e8cff ;
 color: white ;
-padding: 15px ;
+padding: 5px 15px ;
 border-radius: 10px ;
 position: absolute ;
 bottom: 15vh ;
-margin: 0 auto ;
+left: 45vw ;
 
 }
