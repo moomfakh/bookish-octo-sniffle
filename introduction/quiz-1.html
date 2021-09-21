@@ -18,6 +18,8 @@ display: block ;
 width: 100% ;
 margin-block : 10px ;
 }
+.status {
+display: none ;
 </style>
 </head>
 <body>
@@ -27,7 +29,8 @@ margin-block : 10px ;
 <button class="1 options" onclick="corone(this.style)">Writing Quran</button> 
 <button class="1 options" onclick="wroone(this.style)">Following Quran</button>
 <button onclick="wroone(this.style)" class="1 options">Spreading Quran</button>
-<p class="status"></p>
+<p class="status">Writing Quran is not a Hukook of Quran. Hukook of Quran are as follows - 
+<ol><li>Believing Quan</li><li>Reading Quran></li><li>Following Quran</li><li>Spreading Quran</li></ol></p>
 </div>
 <script>
 var x = document.getElementsByClassName("status");
@@ -47,8 +50,7 @@ here.borderColor = "green";
 
 function wroone(here) {
 here.borderColor = "red";
- x[0].innerHTML = "&cross; Wrong";
- x[0].style.color = "red";
+ x[0].style.display = "block";
  document.getElementsByClassName(
   "1")[0].disabled = true;
  document.getElementsByClassName(
