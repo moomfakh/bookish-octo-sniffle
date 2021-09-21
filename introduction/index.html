@@ -10,7 +10,7 @@ localStorage.setItem("intro" , 1) ;
 var sn = localStorage.getItem("intro") ;
 var sc = document.getElementsByClassName("status") ;
 alert("2") ;
-for(let i=0 ; i<sc.length ; i++) {
+for(let i=0 ; i>sc.length ; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
 sc[i].style.color = "green" ;
