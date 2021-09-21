@@ -5,10 +5,12 @@
 <link rel="stylesheet" href="../common.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
+alert("1") ;
 localStorage.setItem("intro" , 1) ;
 var sn = localStorage.getItem("intro") ;
 var i ;
 var sc = document.getElementsByClassName("status") ;
+alert("2") ;
 for(i=0 ; i<sc.length ; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
@@ -20,7 +22,7 @@ sc[i].style.color = "orange" ;
 sc[i].innerHTML = "🔒" ;
 sc[i].style.color="black" ;
 } }
-
+alert("3") ;
 </script>
 </head>
 <body>
