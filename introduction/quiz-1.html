@@ -41,10 +41,18 @@ margin-bottom: 60px ;
 <div class="status">Writing Quran is not a Hukook of Quran. Hukook of Quran are as follows - 
 <ol><li>Believing Quan</li><li>Reading Quran</li><li>Understanding Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol></div>
 </div>
+<div class="con">
+<p class="question" >Complete the sequence of revelation of Quran - Allah : Jibreel : ____ : Ummat</p>
+<button class="2" onclick="wrotwo(this.style)">Adam (A.S)</button><br><br>
+ <button class="2" onclick="wrotwo(this.style)">Musa (A.S)</button><br><br>
+ <button class="2" onclick="wrotwo(this.style)">Isa (A.S)</button><br><br>
+ <button class="2" onclick="cortwo(this.style)">Muhammad (S.A.W)</button><br>
+<div class="status">Allah : Jibreel : <u>Muhammad (S.A.W)</u> : Ummat. Quran was revealed upon Muhammad (S.A.W)</div>
+</div>
+
 <script>
 var x = document.getElementsByClassName("status");
 function corone(here) {
- 
 here.borderColor = "green";
  x[0].style.display = "block";
  x[0].scrollIntoView(true) ;
@@ -61,6 +69,7 @@ here.borderColor = "green";
 function wroone(here) {
 here.borderColor = "red";
  x[0].style.display = "block";
+ x[1].scrollIntoView(true) ;
  document.getElementsByClassName(
   "1")[0].disabled = true;
  document.getElementsByClassName(
@@ -72,6 +81,36 @@ here.borderColor = "red";
  document.querySelector('button[onclick="corone(this.style)"]').style.border =
   "3px solid green";
  }
+function cortwo(here) {
+here.borderColor = "green";
+ x[1].style.display = "block";
+ x[1].scrollIntoView(true) ;
+ document.getElementsByClassName(
+  "2")[0].disabled = true;
+ document.getElementsByClassName(
+  "2")[1].disabled = true;
+ document.getElementsByClassName(
+  "2")[2].disabled = true;
+ document.getElementsByClassName(
+  "2")[3].disabled = true;
+}
+
+function wrotwo(here) {
+here.borderColor = "red";
+ x[1].style.display = "block";
+ x[1].scrollIntoView(true) ;
+ document.getElementsByClassName(
+  "2")[0].disabled = true;
+ document.getElementsByClassName(
+  "2")[1].disabled = true;
+ document.getElementsByClassName(
+  "2")[2].disabled = true;
+ document.getElementsByClassName(
+  "2")[3].disabled = true;
+ document.querySelector('button[onclick="corone(this.style)"]').style.border =
+  "3px solid green";
+ }
+
 </script>
 </body>
 </html>
