@@ -3,23 +3,31 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+.question {
+font-size: 40px ;
+}
+.options {
+font-size: 38px ;
+background: white ;
+border: 2px solid black;
+border-radius : 5px ;
+}
 </style>
 </head>
 <body>
 <div class="con" id="Que-1" >
-<p><h2><u>Q.1</u> </h2></p>
-<button class="1" onclick="wroone(this.style)"></button><br><br>
-<button class="1" onclick="corone(this.style)"></button><br><br> 
-<button class="1" onclick="wroone(this.style)"></button><br><br>
-<button onclick="wroone(this.style)" class="1"></button><br><br>
+<p class="question" >Q.1</p>
+<button class="1 options" onclick="wroone(this.style)"></button><br><br>
+<button class="1 options" onclick="corone(this.style)"></button><br><br> 
+<button class="1 options" onclick="wroone(this.style)"></button><br><br>
+<button onclick="wroone(this.style)" class="1 options"></button><br><br>
 <p class="status"></p>
 </div>
 <script>
 var x = document.getElementsByClassName("status");
 function corone(here) {
  
-here.backgroundColor = "green";
- scp += 1;
+here.borderColor = "green";
  x[0].innerHTML = "✓ Correct";
  document.getElementsByClassName(
   "1")[0].disabled = true;
@@ -32,8 +40,7 @@ here.backgroundColor = "green";
 }
 
 function wroone(here) {
-here.backgroundColor = "red";
- smi += 1;
+here.borderColor = "green";
  x[0].innerHTML = "&cross; Wrong";
  x[0].style.color = "red";
  document.getElementsByClassName(
