@@ -28,6 +28,7 @@ padding: 10px ;
 font-family: arial , sans-serif ;
 margin-block : 25px ;
 margin-bottom: 60px ;
+text-align: center ;
 }
 </style>
 </head>
@@ -39,7 +40,8 @@ margin-bottom: 60px ;
 <button class="1 options" onclick="wroone(this.style)">Following Quran</button>
 <button onclick="wroone(this.style)" class="1 options">Spreading Quran</button>
 <div class="status">Writing Quran is not a Hukook of Quran. Hukook of Quran are as follows - 
-<ol><li>Believing Quan</li><li>Reading Quran</li><li>Understanding Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol></div>
+<ol><li>Believing Quan</li><li>Reading Quran</li><li>Understanding Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol>
+<button class="forward" onclick="forward(0 , 1)">Next </button></div>
 </div>
 <div class="con">
 <p class="question" >Complete the sequence of revelation of Quran - Allah : Jibreel : ____ : Ummat</p>
@@ -112,5 +114,9 @@ here.borderColor = "red";
  }
 
 </script>
-</body>
+<script>
+function forward(current , next) {
+document.getElementsByClassName("con")[current].style.display = none ;
+document.getElementsByClassName("con")[next].style.display = block ;
+</script></body>
 </html>
