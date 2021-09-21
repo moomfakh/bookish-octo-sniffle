@@ -20,6 +20,12 @@ margin-block : 10px ;
 }
 .status {
 display: none ;
+border: 2px solid purple ;
+border-radius: 10px ;
+background: purple ;
+padding: 10px ;
+font-family: arial , sans-serif ;
+margin-block : 15px ;
 }
 </style>
 </head>
@@ -31,7 +37,7 @@ display: none ;
 <button class="1 options" onclick="wroone(this.style)">Following Quran</button>
 <button onclick="wroone(this.style)" class="1 options">Spreading Quran</button>
 <div class="status">Writing Quran is not a Hukook of Quran. Hukook of Quran are as follows - 
-<ol><li>Believing Quan</li><li>Reading Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol></div>
+<ol><li>Believing Quan</li><li>Reading Quran</li><li>Understanding Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol></div>
 </div>
 <script>
 var x = document.getElementsByClassName("status");
@@ -39,6 +45,7 @@ function corone(here) {
  
 here.borderColor = "green";
  x[0].style.display = "block";
+ x[0].scrollIntoView(false) ;
  document.getElementsByClassName(
   "1")[0].disabled = true;
  document.getElementsByClassName(
