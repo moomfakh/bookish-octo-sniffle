@@ -4,15 +4,30 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="../common.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-</style>
+<script>
+localStorage.setItem("intro" , 1)
+var sn = parseInt(localStorage.getItem("intro")) ;
+var i ;
+var sc = document.getElementsByClassName("status") ;
+for(i=0 ; i==sc.length ; i++) {
+if(i < sn) { 
+sc[i].innerHTML = "✓" ;
+sc[i].style.color = "green" ;
+} else if (i == sn) {
+sc[i].innerHTML = "•••" ;
+sc[i].style.color = "orange" ;
+} else {
+sc[i].innerHTML = "🔒" ;
+sc[i].style.color="black" ;
+}
+
+</script>
 </head>
 <body>
 <div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
-<p class="info"><span class="material-icons" >smart_display</span>Quran ke Hukook 
-<img style="display: inline ; height: 8px ; margin-block: 0 " src ="https://res.cloudinary.com/tajweed/image/upload/v1632233942/icons8-tick-box_ipsx1e.svg"></p></div></div>
+<p class="info"><span class="material-icons" >smart_display</span>Quran ke Hukook <span class="status"></span></p></div></div>
 <div class="card" tabindex=0 onclick="nav('quiz-1.html')" ><div class="container">
-<p class="info"><span class="material-icons" >quiz</span>Tajweed</p>
+<p class="info"><span class="material-icons" >quiz</span>Tajweed <span class="status"></span></p>
 </div></div>
 <script src="../common.js"></script>
 </body>
