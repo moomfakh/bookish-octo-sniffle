@@ -14,7 +14,8 @@
 <script>
 var sn = localStorage.getItem("intro") ;
 var sc = document.getElementsByClassName("status") ;
-if( sn == null ) { localStorage.setItem("intro", 0) }
+var card = document.getElementsByClassName("card") ;
+if( sn == null ) { localStorage.setItem("intro", 0) ; sn = localStorage.getItem("intro")}
 for(let i=0 ; i<sc.length; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
@@ -25,6 +26,7 @@ sc[i].style.color = "orange" ;
 } else {
 sc[i].innerHTML = "🔒" ;
 sc[i].style.color="black" ;
+card[i].onclick = "" ;
 } }  ;
 </script>
 <script src="../common.js"></script>
