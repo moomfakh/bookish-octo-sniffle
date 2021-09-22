@@ -5,11 +5,10 @@
 <link rel="stylesheet" href="../common.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>
-alert("1") ;
 localStorage.setItem("intro" , 1) ;
 var sn = localStorage.getItem("intro") ;
 var sc = document.getElementsByClassName("status") ;
-alert("2") ;
+alert(sc) ;
 for(let i=0 ; i<2; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
@@ -27,9 +26,9 @@ alert("3") ;
 </head>
 <body>
 <div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
-<p class="info"><span class="material-icons" >smart_display</span>Quran ke Hukook <span class="status"></span></p></div></div>
+<p class="info"><span class="material-icons" >smart_display</span>Quran ke Hukook <p class="status"></p></p></div></div>
 <div class="card" tabindex=0 onclick="nav('quiz-1.html')" ><div class="container">
-<p class="info"><span class="material-icons" >quiz</span>Tajweed <span class="status"></span></p>
+<p class="info"><span class="material-icons" >quiz</span>Tajweed <p class="status"></p></p>
 </div></div>
 <script src="../common.js"></script>
 </body>
