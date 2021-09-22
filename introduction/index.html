@@ -14,7 +14,7 @@
 <script>
 var sn = localStorage.getItem("intro") ;
 var sc = document.getElementsByClassName("status") ;
-if( sn == null ) { localStorage.setItem("intro", 2) }
+if( sn == null ) { localStorage.setItem("intro", 0) }
 for(let i=0 ; i<sc.length; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
