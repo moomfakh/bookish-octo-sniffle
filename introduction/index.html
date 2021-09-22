@@ -14,7 +14,7 @@
 <script>
 var sn = localStorage.getItem("intro") ;
 var sc = document.getElementsByClassName("status") ;
-if( sn != null ) {
+if( sn == null ) { localStorage.setItem("intro", 0) }
 for(let i=0 ; i<sc.length; i++) {
 if(i < sn) { 
 sc[i].innerHTML = "✓" ;
@@ -25,7 +25,7 @@ sc[i].style.color = "orange" ;
 } else {
 sc[i].innerHTML = "🔒" ;
 sc[i].style.color="black" ;
-} } } ;
+} }  ;
 </script>
 <script src="../common.js"></script>
 </body>
