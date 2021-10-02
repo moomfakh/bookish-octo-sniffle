@@ -21,10 +21,26 @@
  <button class="2 options" onclick="wrotwo(this.style)">Musa (A.S)</button>
  <button class="2 options" onclick="wrotwo(this.style)">Isa (A.S)</button>
  <button class="2 options" onclick="cortwo(this.style)">Muhammad (S.A.W)</button>
-<div class="status">Allah : Jibreel : <u>Muhammad (S.A.W)</u> : Ummat. Quran was revealed upon Muhammad (S.A.W)<br>
-<button class="forward" onclick="nav('index.html') ; setlevel(2 , 'intro')">Next </button></div>
+<div class="status">Allah : Jibreel : <u>Muhammad (S.A.W)</u> : Ummat. Quran was revealed upon Muhammad (S.A.W)<br><button class="forward" onclick="forward(1 , 2)">Next </button>
 </div>
+</div>
+<div class="con">
 
+<p class="question" >Which of the following is not a part of Tajweed ?</p>
+
+<button class="3 options" onclick="wrothree(this.style)">Makharij</button>
+
+ <button class="3 options" onclick="wrothree(this.style)">Sifaat</button>
+ 
+ <button class="3 options" onclick="corthree(this.style)">Qirat</button>
+
+ <button class="3 options" onclick="wrothree(this.style)">Qawaid</button>
+
+<div class="status">Makharij, Sifaat and Qawaid are parts of Tajweed while Qirat is the art of reading Quran with beautiful voice
+<button class="forward" onclick="nav('index.html') ; setlevel(4 , 'intro')">Next </button></div>
+
+</div>
+ </div>
 <script>
 var x = document.getElementsByClassName("status");
 function corone(here) {
@@ -85,7 +101,59 @@ here.borderColor = "red";
  document.querySelector('button[onclick="cortwo(this.style)"]').style.border =
   "3px solid green";
  }
+function corthree(here) {
 
+here.borderColor = "green";
+
+ x[2].style.display = "block";
+
+ x[2].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "3")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[3].disabled = true;
+
+}
+function wrothree(here) {
+
+here.borderColor = "green";
+
+ x[2].style.display = "block";
+
+ x[2].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "3")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "3")[3].disabled = true;
+ document.querySelector('button[onclick="corthree(this.style)"]').style.border =
+  "3px solid green";
+
+
+}
 </script>
 <script src="../common.js" >
 </script></body>
