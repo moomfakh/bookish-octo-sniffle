@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="../common.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >smart_display</span>Getting started<span class="status"></span></p></div></div>
+
+<div class="card" tabindex=0 onclick="nav('video-2.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >smart_display</span>A little mistake<span class="status"></span></p></div></div>
+
+<div class="card" tabindex=0 onclick="nav('info.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >assignment</span>Parts of Tajweed<span class="status"></span></p></div></div>
+
+  <div class="card" tabindex=0 onclick="nav('quiz-1.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >quiz</span>Mini Quiz<span class="status"></span></p>
+
+</div></div>
+
+<script>
+
+var sn = localStorage.getItem("intro") ;
+
+var sc = document.getElementsByClassName("status") ;
+
+var card = document.getElementsByClassName("card") ;
+
+if( sn == null ) { localStorage.setItem("intro", 0) ; sn = localStorage.getItem("intro")}
+
+for(let i=0 ; i<sc.length; i++) {
+
+if(i < sn) { 
+
+sc[i].innerHTML = "✓" ;
+
+sc[i].style.color = "green" ;
+
+} else if (i == sn) {
+
+sc[i].innerHTML = "•••" ;
+
+sc[i].style.color = "orange" ;
+
+} else {
+
+sc[i].innerHTML = "🔒" ;
+
+sc[i].style.color="black" ;
+
+card[i].onclick = "alert('Complete previous chapters to learn this')" ;
+
+} }  ;
+
+</script>
+
+<script src="../common.js"></script>
+
+</body>
+
+</html>
