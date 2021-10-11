@@ -5,37 +5,58 @@
   <head>
 
     <style>
+
 .flip {
+
   opacity: 0.5 ;
+
   }
+
     </style>
 
   </head>
 
   <body>
-<div onclick="flip(0 , this.element)">Makahroj</div>
+
 <div onclick="flip(0 , this)">Makahroj</div>
 
+<div onclick="flip(0 , this)">Makahroj</div>
 
 	  <script>
+
 		  var lim = 0;
+
       var pm ;
-      var copen = document.querySelector(".flip") ;
+
+      var copen = document.getElementsByClassName("flip") ;
+
 		  function flip(match , elem) {
+
 			  if(lim== 0) {
+
 				  elem.classList.add("flip") ;
+
 				  lim++ ;
+
           pm = match ;
+
 				  } else {
+
 					elem.classList.add("flip") ;
+
             if (match == pm) {
-              setTimeout(copen[0].style.display = "none" ; copen[1].display = "none" ; , 1000)
+copen[0].style.visbility = "hidden" ;
+       
          }     
+
             } 
+
             }
+
 </script>
+
 		  
+
   </body>
 
  </html>
-
