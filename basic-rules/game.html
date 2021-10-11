@@ -48,9 +48,13 @@
 					elem.classList.add("flip") ;
 
             if (match == pm) {
-setTimeout(function (){copen[0].style.visibility = "hidden" ; copen[1].style.visibility = "hidden" }, 2000)
+setTimeout(function (){copen[0].style.visibility = "hidden" ; copen[1].style.visibility = "hidden" ; copen[0].classList.remove("flip")
+
+	copen[1].classList.remove("flip")
+
+ }, 2000)
        
-         }     else { 
+         } else { 
 		 copen[0].classList.remove("flip")
 	copen[1].classList.remove("flip")
 }
