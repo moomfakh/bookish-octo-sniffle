@@ -18,16 +18,19 @@
 
   <body>
 
-<div onclick="flip(0 , this)">Makahroj</div>
+<div onclick="flip(0 , this)">Makahoj</div>
 
 <div onclick="flip(0 , this)">Makahroj</div>
+
 	  
 
 <div onclick="flip(1 , this)">Makahroj</div>
+
 <div onclick="flip(1 , this)">Makahroj</div>
+
 	  <script>
 
-		  var lim = 0;
+ var lim = 0;
 
       var pm ;
 
@@ -48,19 +51,48 @@
 					elem.classList.add("flip") ;
 
             if (match == pm) {
-setTimeout(function (){copen[0].style.visibility = "hidden" ; copen[1].style.visibility = "hidden" ; copen[0].classList.remove("flip")
 
-	copen[1].classList.remove("flip")
+setTimeout(function (){
+
+                   var i ;
+
+for(i=0 ; i<copen.length ; ) 
+
+  {copen[i].style.visibility = "hidden"  ; 
+
+ copen[i ].classList.remove("flip")        
+
+    }
 
  }, 2000)
+
+lim=0
+
        
+
          } else { 
-		 copen[0].classList.remove("flip")
-	copen[1].classList.remove("flip")
+
+  setTimeout(function (){
+
+              var i ;
+
+for(i=0 ; i<copen.length ; ) 
+
+  {
+
+ copen[i ].classList.remove("flip")        
+
+    }
+
+ }, 2000)
+
 }
+
+ 
+
             } 
 
-            }
+           }
 
 </script>
 
