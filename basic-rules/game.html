@@ -1,360 +1,41 @@
 <!doctype html>
+
 <html>
+
   <head>
+
     <style>
-      html {
-
-	box-sizing: border-box;
-
-}
-
-*,
-
-*::before,
-
-*::after {
-
-	box-sizing: inherit;
-
-}
-
-html,
-
-body {
-
-	width: 100%;
-
-	height: 100%;
-
-	margin: 0;
-
-	padding: 0;
-
-}
-
-body {
-
-	background: #ffffff;
-
-	font-family: 'Permanent Marker', cursive;
-
-	font-size: 16px;
-
-}
-
-.container {
-
-	display: flex;
-
-	justify-content: center;
-
-	align-items: center;
-
-	flex-direction: column;
-
-}
-
-h1 {
-
-	font-family: 'Gloria Hallelujah', cursive;
-
-}
-
-/*
-
- * Styles for the deck of cards
-
- */
-
-.deck {
-
-	width: 85%;
-
-	background: #716F71;
-
-	padding: 1rem;
-
-	border-radius: 4px;
-
-	box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
-
-	display: flex;
-
-	flex-wrap: wrap;
-
-	justify-content: space-around;
-
-	align-items: center;
-
-	margin: 0 0 3em;
-
-}
-
-.deck .card {
-
-	height: 3.7rem;
-
-	width: 3.7rem;
-
-	margin: 0.2rem 0.2rem;
-
-	background: #141214;;
-
-	font-size: 0;
-
-	color: #ffffff;
-
-	border-radius: 5px;
-
-	cursor: pointer;
-
-	display: flex;
-
-	justify-content: center;
-
-	align-items: center;
-
-	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-
-}
-
-.deck .card.open {
-
-	transform: rotateY(0);
-
-	background: #02b3e4;
-
-	cursor: default;
-
-	animation-name: flipInY;
-
-	-webkit-backface-visibility: visible !important;
-
-	backface-visibility: visible !important;
-
-	animation-duration: .75s;
-
-}
-
-.deck .card.show {
-
-	font-size: 33px;
-
-}
-
-.deck .card.match {
-
-	cursor: default;
-
-	background: #E5F720;
-
-	font-size: 33px;
-
-	animation-name: rubberBand;
-
-	-webkit-backface-visibility: visible !important;
-
-	backface-visibility: visible !important;
-
-	animation-duration: .75s;
-
-}
-
-.deck .card.unmatched {
-
-	animation-name: pulse;
-
-	-webkit-backface-visibility: visible !important;
-
-	backface-visibility: visible !important;
-
-	animation-duration: .75s;
-
-	background: #e2043b;
-
-}
-
-.deck .card.disabled {
-
-	pointer-events: none;
-
-	opacity: 0.9;
-
-}
-    </style>
-  </head>
-  <body>
-    <div class="container">
-
-        <header>
-
-            <h1>Memory Game</h1>
-
-        </header>
-
-        </section>
-
-        <ul class="deck" id="card-deck">
-
-            <li class="card" type="diamond">
-
-                <i class="fa fa-diamond"></i>
-
-            </li>
-
-            <li class="card" type="plane">
-
-                <i class="fa fa-paper-plane-o"></i>
-
-            </li>
-
-            <li class="card match" type="anchor">
-
-                <i class="fa fa-anchor"></i>
-
-            </li>
-
-            <li class="card" type="bolt" >
-
-                <i class="fa fa-bolt"></i>
-
-            </li>
-
-            <li class="card" type="cube">
-
-                <i class="fa fa-cube"></i>
-
-            </li>
-
-            <li class="card match" type="anchor">
-
-                <i class="fa fa-anchor"></i>
-
-            </li>
-
-            <li class="card" type="leaf">
-
-                <i class="fa fa-leaf"></i>
-
-            </li>
-
-            <li class="card" type="bicycle">
-
-                <i class="fa fa-bicycle"></i>
-
-            </li>
-<script>
-	
-let card = document.getElementsByClassName("card");
-
-let cards = [...card];
-
-// loop to add event listeners to each card
-
-for (var i = 0; i < cards.length; i++){
-
-   cards[i].addEventListener("click", displayCard);
-
-};
-	
-
-	
-
-	
-
-	
-
-	
-function shuffle(array) {
-
-  var currentIndex = array.length, temporaryValue, randomIndex;
-
-  while (currentIndex !== 0) {
-
-    randomIndex = Math.floor(Math.random() * currentIndex);
-
-    currentIndex -= 1;
-
-    temporaryValue = array[currentIndex];
-
-    array[currentIndex] = array[randomIndex];
-
-    array[randomIndex] = temporaryValue;
-
+.flip {
+  opacity: 0.5 ;
   }
+    </style>
 
-  return array;
+  </head>
 
-}
-	
-const deck = document.querySelector(".deck");
-function startGame(){
+  <body>
+<div onclick="flip(0 , this)">Makahroj</div>
+<div onclick="flip(0 , this)">Makahroj</div>
 
-   var shuffledCards = shuffle(cards);
 
-   for (var i= 0; i < shuffledCards.length; i++){
+	  <script>
+		  var lim = 0;
+      var pm ;
+      var copen = document.querySelector(".flip") ;
+		  function flip(match , elem) {
+			  if(lim== 0) {
+				  elem.classList.add("flip") ;
+				  lim++ ;
+          pm = match ;
+				  } else {
+					elem.classList.add("flip") ;
+            if (match == pm) {
+              setTimeout(copen[0].style.display = "none" ; copen[1].display = "none" ; , 1000)
+         }     
+            } 
+            }
+</script>
+		  
+  </body>
 
-      [].forEach.call(shuffledCards, function(item){
-
-         deck.appendChild(item);
-
-      });
-
-   }        
-	window.onload = startGame(); 
-//add opened cards to OpenedCards list and check if cards are match or not
-function cardOpen() {
-    openedCards.push(this);
-    var len = openedCards.length;
-    if(len === 2){
-        moveCounter();
-        if(openedCards[0].type === openedCards[1].type){
-            matched();
-        } else {
-            unmatched();
-        }
-    }
-};
-
-//for when cards match
-function matched(){
-    openedCards[0].classList.add("match");
-    openedCards[1].classList.add("match");
-    openedCards[0].classList.remove("show", "open");
-    openedCards[1].classList.remove("show", "open");
-    openedCards = [];
-}
-
-//for when cards don't match
-function unmatched(){
-    openedCards[0].classList.add("unmatched");
-    openedCards[1].classList.add("unmatched");
-    disable();
-    setTimeout(function(){
-        openedCards[0].classList.remove("show", "open", "unmatched");
-        openedCards[1].classList.remove("show", "open", "unmatched");
-        enable();
-        openedCards = [];
-    },1100);
-}
-
-//disable cards temporarily
-function disable(){
-    Array.prototype.filter.call(cards, function(card){
-        card.classList.add('disabled');
-    });
-}
-
-//enable cards and disable matched cards
-function enable(){
-    Array.prototype.filter.call(cards, function(card){
-        card.classList.remove('disabled');
-        for(var i = 0; i < matchedCard.length; i++){
-            matchedCard[i].classList.add("disabled");
-        }
-    });
-}	
- </script> </body>
  </html>
-
 
