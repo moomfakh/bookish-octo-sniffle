@@ -251,7 +251,7 @@ background: aliceblue ;
       var pm ;
 
       var copen = document.getElementsByClassName("flip") ;
-
+var di ;
 		  function flip(match , elem) {
 
 			  if(lim== 0) {
@@ -259,7 +259,8 @@ background: aliceblue ;
 				  elem.classList.add("flip") ;
 
 				  lim++ ;
-
+di = elem ;
+				  alert(elem.onclick) ;
           pm = match ;
 
 				  } else {
