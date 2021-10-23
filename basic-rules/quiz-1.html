@@ -1,0 +1,176 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="../quiz.css">
+
+</head>
+
+<body>
+
+<div class="con" id="Que-1" >
+
+<p class="question" >Which of the following is <b>not</b> a hukook of quran</p>
+
+<button class="1 options" onclick="wroone(this.style)">Reading Quran</button>
+
+<button class="1 options" onclick="corone(this.style)">Writing Quran</button> 
+
+<button class="1 options" onclick="wroone(this.style)">Following Quran</button>
+
+<button onclick="wroone(this.style)" class="1 options">Spreading Quran</button>
+
+<div class="status">Writing Quran is not a Hukook of Quran. Hukook of Quran are as follows - 
+
+<ol><li>Believing Quan</li><li>Reading Quran</li><li>Understanding Quran</li><li>Following Quran</li><li>Spreading Quran</li></ol>
+
+<br><button class="forward" onclick="forward(0 , 1)">Next </button></div>
+
+</div>
+
+<div class="con">
+
+<p class="question" >Complete the sequence of revelation of Quran - Allah : Jibreel : ____ : Ummat</p>
+
+<button class="2 options" onclick="wrotwo(this.style)">Adam (A.S)</button>
+
+ <button class="2 options" onclick="wrotwo(this.style)">Musa (A.S)</button>
+
+ <button class="2 options" onclick="wrotwo(this.style)">Isa (A.S)</button>
+
+ <button class="2 options" onclick="cortwo(this.style)">Muhammad (S.A.W)</button>
+
+<div class="status">Allah : Jibreel : <u>Muhammad (S.A.W)</u> : Ummat. Quran was revealed upon Muhammad (S.A.W)<br><button class="forward" onclick="forward(1 , 2)">Next </button>
+
+</div>
+
+</div>
+
+<script>
+
+var x = document.getElementsByClassName("status");
+
+function corone(here) {
+
+here.borderColor = "green";
+
+ x[0].style.display = "block";
+
+ x[0].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "1")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1")[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1")[3].disabled = true;
+
+}
+
+function wroone(here) {
+
+here.borderColor = "red";
+
+ x[0].style.display = "block";
+
+ x[0].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "1")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1" )[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "1")[3].disabled = true;
+
+ document.querySelector('button[onclick="corone(this.style)"]').style.border =
+
+  "3px solid green";
+
+ }
+
+function cortwo(here) {
+
+here.borderColor = "green";
+
+ x[1].style.display = "block";
+
+ x[1].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "2")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[3].disabled = true;
+
+}
+
+function wrotwo(here) {
+
+here.borderColor = "red";
+
+ x[1].style.display = "block";
+
+ x[1].scrollIntoView(true) ;
+
+ document.getElementsByClassName(
+
+  "2")[0].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[1].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[2].disabled = true;
+
+ document.getElementsByClassName(
+
+  "2")[3].disabled = true;
+
+ document.querySelector('button[onclick="cortwo(this.style)"]').style.border =
+
+  "3px solid green";
+
+ }
+
+
+</script>
+
+<script src="../common.js" >
+
+</script></body>
+
+</html>
