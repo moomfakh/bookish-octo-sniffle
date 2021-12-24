@@ -9,11 +9,75 @@
 <link rel="stylesheet" href="../common.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
 
+  background: #FFF url("https://i.imgur.com/KheAuef.png") top left repeat-x;
+
+  font-family: 'Alex Brush', cursive !important;
+
+}
+
+.page    { display: none; padding: 0 0.5em; }
+
+.page h1 { font-size: 2em; line-height: 1em; margin-top: 1.1em; font-weight: bold; }
+
+.page p  { font-size: 1.5em; line-height: 1.275em; margin-top: 0.15em; }
+
+#loading {
+
+  display: flex;
+
+  position: fixed;
+
+  z-index: 100;
+
+  width: 100%;
+
+  height: 100%;
+
+  background-color: rgba(192, 192, 192, 0.5);
+
+  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+}
+    </style>
+<script>const wait = (delay = 0) =>
+
+  new Promise(resolve => setTimeout(resolve, delay));
+
+const setVisible = (elementOrSelector, visible) => 
+
+  (typeof elementOrSelector === 'string'
+
+    ? document.querySelector(elementOrSelector)
+
+    : elementOrSelector
+
+  ).style.display = visible ? 'block' : 'none';
+
+setVisible('.page', false);
+
+setVisible('#loading', true);
+
+document.addEventListener('DOMContentLoaded', () =>
+
+  wait(1000).then(() => {
+
+    setVisible('.page', true);
+
+    setVisible('#loading', false);
+
+  }));
+  </script>
 </head>
 
 <body>
-
+<div id="loading"></div>
 <div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
 
 <p class="info"><span class="material-icons" >smart_display</span>Thick or light<span class="status"></span></p></div></div>
