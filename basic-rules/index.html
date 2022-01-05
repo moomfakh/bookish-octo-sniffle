@@ -4,134 +4,70 @@
 
 <head>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-<link rel="stylesheet" href="../common.css">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
 
+<style>
 
+body {
 
-
-
-.page    { display: none; padding: 0 0.5em; }
-
-.page h1 { font-size: 2em; line-height: 1em; margin-top: 1.1em; font-weight: bold; }
-
-.page p  { font-size: 1.5em; line-height: 1.275em; margin-top: 0.15em; }
-
-#loading {
-
-  display: flex;
-
-  position: fixed;
-
-  z-index: 100;
-
-  width: 100%;
-
-  height: 100%;
-
-  background-color: rgba(192, 192, 192, 0.5);
-
-  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
-
-  background-repeat: no-repeat;
-
-  background-position: center;
+background: #2e8cff ;
 
 }
-    </style>
-<script>const wait = (delay = 0) =>
 
-  new Promise(resolve => setTimeout(resolve, delay));
+.card {
 
-const setVisible = (elementOrSelector, visible) => 
+  /* Add shadows to create the "card" effect */
 
-  (typeof elementOrSelector === 'string'
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
-    ? document.querySelector(elementOrSelector)
+  transition: 0.3s;
 
-    : elementOrSelector
+text-align: center ;
 
-  ).style.display = visible ? 'block' : 'none';
+background: white ;
 
-setVisible('.page', false);
+}
 
-setVisible('#loading', true);
+/* On mouse-over, add a deeper shadow */
 
-document.addEventListener('DOMContentLoaded', () =>
+.card:hover {
 
-  wait(1000).then(() => {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
-    setVisible('.page', true);
+}
 
-    setVisible('#loading', false);
+/* Add some padding inside the card container */
 
-  }));
-  </script>
+.container {
+
+  padding: 18px 9px;
+
+}
+
+.title {
+
+font-size: 36px ;
+
+}
+
+</style>
+
 </head>
 
 <body>
-<div class=page>
-<div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
 
-<p class="info"><span class="material-icons" >smart_display</span>Thick or light<span class="status"></span></p></div></div>
-
-
-<div class="card" tabindex=0 onclick="nav('video-2.html')" ><div class="container">
-
-<p class="info"><span class="material-icons" >smart_display</span>Bouncing back<span class="status"></span></p></div></div>
-
-  <div class="card" tabindex=0 onclick="nav('quiz-1.html')" ><div class="container">
-
-<p class="info"><span class="material-icons" >quiz</span>Answer these<span class="status"></span></p>
-
-</div></div>
-<div class="card" tabindex=0 onclick="nav('video-3.html')" ><div class="container">
-
-<p class="info"><span class="material-icons" >smart_display</span>Aw-Ay , Mushaddah<span class="status"></span></p></div></div>
-
+<div class="card" tabindex=0 onclick="nav('introduction.html')" ><div class="container"><p class="title" >Introduction</p></div></div>
 
 <script>
 
-var sn = localStorage.getItem("basic") ;
+function nav(uri) {
 
-var sc = document.getElementsByClassName("status") ;
+window.location.href = uri; 
 
-var card = document.getElementsByClassName("card") ;
-
-if( sn == null ) { localStorage.setItem("intro", 0) ; sn = localStorage.getItem("intro")}
-
-for(let i=0 ; i<sc.length; i++) {
-
-if(i < sn) { 
-
-sc[i].innerHTML = "✓" ;
-
-sc[i].style.color = "green" ;
-
-} else if (i == sn) {
-
-sc[i].innerHTML = "•••" ;
-
-sc[i].style.color = "orange" ;
-
-} else {
-
-sc[i].innerHTML = "🔒" ;
-
-sc[i].style.color="black" ;
-
-card[i].onclick = "alert('Complete previous chapters to learn this')" ;
-
-} }  ;
+}
 
 </script>
 
-<script src="../common.js"></script>
-</div> <div id="loading"></div>
 </body>
 
 </html>
