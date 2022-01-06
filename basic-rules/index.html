@@ -1,73 +1,74 @@
-
 <!doctype html>
 
 <html>
 
 <head>
+<title>Basic Rules of Tajweed</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="../common.css">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-
-body {
-
-background: #2e8cff ;
-
-}
-
-.card {
-
-  /* Add shadows to create the "card" effect */
-
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-  transition: 0.3s;
-
-text-align: center ;
-
-background: white ;
-
-}
-
-/* On mouse-over, add a deeper shadow */
-
-.card:hover {
-
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-
-}
-
-/* Add some padding inside the card container */
-
-.container {
-
-  padding: 18px 9px;
-
-}
-
-.title {
-
-font-size: 36px ;
-
-}
-
-</style>
 
 </head>
 
 <body>
 
-<div class="card" tabindex=0 onclick="nav('introduction.html')" ><div class="container"><p class="title" >Introduction</p></div></div>
+<div class="card" tabindex=0 onclick="nav('video-1.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >smart_display</span>Thick or light<span class="status"></span></p></div></div>
+
+<div class="card" tabindex=0 onclick="nav('video-2.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >smart_display</span>Bouncing back<span class="status"></span></p></div></div>
+
+  <div class="card" tabindex=0 onclick="nav('quiz-1.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >quiz</span>Answer these<span class="status"></span></p>
+
+</div></div>
+
+<div class="card" tabindex=0 onclick="nav('video-3.html')" ><div class="container">
+
+<p class="info"><span class="material-icons" >smart_display</span>Aw-Ay , Mushaddah<span class="status"></span></p></div></div>
 
 <script>
 
-function nav(uri) {
+var sn = localStorage.getItem("basic") ;
 
-window.location.href = uri; 
+var sc = document.getElementsByClassName("status") ;
 
-}
+var card = document.getElementsByClassName("card") ;
+
+if( sn == null ) { localStorage.setItem("intro", 0) ; sn = localStorage.getItem("intro")}
+
+for(let i=0 ; i<sc.length; i++) {
+
+if(i < sn) { 
+
+sc[i].innerHTML = "✓" ;
+
+sc[i].style.color = "green" ;
+
+} else if (i == sn) {
+
+sc[i].innerHTML = "•••" ;
+
+sc[i].style.color = "orange" ;
+
+} else {
+
+sc[i].innerHTML = "🔒" ;
+
+sc[i].style.color="black" ;
+
+card[i].onclick = "alert('Complete previous chapters to learn this')" ;
+
+} }  ;
 
 </script>
+
+<script src="../common.js"></script>
 
 </body>
 
